@@ -1,0 +1,10 @@
+
+*.o
+
+*.elf
+
+*.iso
+
+iso/
+
+stage2_eltorito
