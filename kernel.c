@@ -1,19 +1,6 @@
 #include <inttypes.h>
 #include "graphics/graphics.h"
-#include "common/common.h"
 
-
-char getScanCode(){
-    char c = 0;
-    do {
-        if (inb(0x60) != c){
-            c = inb(0x60);
-            if (c>0){
-                return c;
-            }
-        }
-    } while (1);
-}
 
 void kmain(void){
     const char *str = "geos kernel";
