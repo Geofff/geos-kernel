@@ -19,12 +19,14 @@ set(SOURCE_FILES
     iso/boot/grub/stage2_eltorito
     idt.c
     kernel.asm
+        isr.asm
+        irq.asm
     kernel.c
     link.ld
     Makefile
     menu.lst
     README.md
-    stage2_eltorito)
+        stage2_eltorito gdt.c system.h isr.c irq.c graphics/gui.c graphics/gui.h)
 include_directories("${PROJECT_SOURCE_DIR}/libc")
 add_subdirectory(libc)
 add_executable(geos ${SOURCE_FILES})
